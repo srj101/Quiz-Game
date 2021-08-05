@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+const formatArea = function(val){
+  return val + " ft&sup3;";
+}
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App text={formatArea(53)}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

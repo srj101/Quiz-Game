@@ -72,3 +72,9 @@ p.channel-name {
 }
 
 
+
+
+ul#options > span:last-child > span#commma , ul#options > span:nth-child(4) > span#commma {
+    display: none;
+}
+

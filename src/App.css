@@ -25,10 +25,7 @@ body{
 
 /* Medium Layout: 1280px. */
 @media only screen and (min-width: 1170px) and (max-width: 1920px) { 
-  
-    .App {
-        width: 1170px;
-    }
+
 }
 /* Tablet & mobile Layout: 768px. */
 @media only screen and (max-width: 1184px) { 
@@ -83,4 +80,26 @@ body{
         margin: auto 20%;
     }
    
+}
+
+
+
+#question::before {
+    content: "Question: ";
+}
+
+#answer::before {
+    content: "Answer: ";
+}
+#options > li{
+    margin-bottom: 25px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.single-video- > span > li {
+    margin-bottom: 50px;
 }

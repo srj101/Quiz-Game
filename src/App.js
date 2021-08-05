@@ -1,5 +1,5 @@
 import './App.css';
-import { VideoList } from './Components/VideoList/VideoList.component';
+import  VideoList  from './Components/VideoList/VideoList.component';
 import { Component } from 'react';
 
 class MyApp extends Component{
@@ -8,29 +8,57 @@ class MyApp extends Component{
     super();
     this.state = {
       videos: [],
-      searchField: ''
+      searchField: '',
+      key: 9
     }
   }
 
+  shuffle =  (array) => {
+    var currentIndex = array.length,  randomIndex;
+  
+    
+    while (0 !== currentIndex) {
+  
+      
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
+
+
   componentDidMount(){
-    fetch('https://mocki.io/v1/b6dbd5dd-2f75-4b48-8287-12a1fc16ebf7')
+    fetch('https://opentdb.com/api.php?amount=20&category=23&difficulty=easy&type=multiple')
     .then(response => response.json())
-    .then(users => this.setState({videos:users}))
+    .then(datas => this.setState({videos:datas.results}))
   }
 
   render(){
+    
 
-    const {videos,searchField} = this.state; 
+    const {videos,searchField,key} = this.state; 
+
+
+
     const filteredvideos = videos.filter(video => {
-      return video.title.toLowerCase().includes(searchField.toLowerCase())  
+      return video.category.toLowerCase().includes(searchField.toLowerCase())  
     });
 
-      console.log(filteredvideos);
+    // const answers = videos.map(video => {
+    //   this.shuffle(video.incorrect_answers.concat(video.correct_answer));
+    // }) 
+    // this.setState({answerss:answers})
+    // {console.log(this.state.answers)}
 
     return(
       <div className="App">
         <input type="search" className="ssearch" placeholder="Search" onChange={ e => this.setState({ searchField: e.target.value }) }/>
-        <VideoList videos={filteredvideos} />
+        <VideoList videos={filteredvideos} key={key}  />
       </div>
     )
   }
