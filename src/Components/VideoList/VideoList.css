@@ -1,51 +1,48 @@
-
-
 .video-container {
-    display: block;
-    margin:0 auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 60vw;
+  padding: 40px 0;
 }
 
-.video-container  .single-video-item:hover {
-    opacity: 0.8;
+.video-container .single-video-item:hover {
+  opacity: 0.8;
 }
-
 
 .video-container > .single-video-item:hover .video-title > h3:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    color: #909090;
-    font-family: fontAwesome;
-    content: "\f142";
-    font-size: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  color: #909090;
+  font-family: fontAwesome;
+  content: "\f142";
+  font-size: 16px;
 }
 
-
 /* Wide Mobile Layout: 480px. */
-@media only screen and (min-width: 480px) and (max-width: 767px) { 
-    .App {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        width: auto;
-    }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .App {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+  }
 
-    .video-container > .single-video-item {
-        max-width: 100% !important;
-        width: auto !important;
-        display: block !important;
-        margin: auto 20%;
-    }
+  .video-container > .single-video-item {
+    max-width: 100% !important;
+    width: auto !important;
+    display: block !important;
+    margin: auto 20%;
+  }
 
-    .App input.ssearch[type="search"] {
-        
-        padding: 10px 20px;
-        
-        font-size: 15px;
-    }
-    .video-title h3 {
-        font-size: 15px;
-    }
+  .App input.ssearch[type="search"] {
+    padding: 10px 20px;
+
+    font-size: 15px;
+  }
+  .video-title h3 {
+    font-size: 15px;
+  }
 }

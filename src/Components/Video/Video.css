@@ -1,80 +1,86 @@
-
-
-
 .video-container > .single-video-item {
-    max-width: 360px;
-    display: inline-table;
-    padding: 15px;
-    transition: .3s ease-in-out;
-    cursor: pointer;
+  max-width: 360px;
+  display: inline-table;
+  padding: 15px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
-
 
 .single-video-thumbnail img {
-    max-height: 202px;
-    width: 100%;
+  max-height: 202px;
+  width: 100%;
 }
-
 
 .video-title h3 {
-    color: #030303;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    white-space: normal;
-    -webkit-line-clamp: 2;
-    font-weight: 500;
-    line-height: 1.6rem;
-    letter-spacing: normal;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: left;
-    padding-left: 15px;
-    margin-bottom: 0;
-    position: relative;
-    padding-right: 25px;
+  color: #030303;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  font-weight: 500;
+  line-height: 1.6rem;
+  letter-spacing: normal;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 15px;
+  margin-bottom: 0;
+  position: relative;
+  padding-right: 25px;
 }
 .video-title img {
-    float: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
+  float: left;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
 }
-p{
-    color: #606060;
-    font-size: 8px;
+p {
+  color: #606060;
+  font-size: 8px;
 }
 .video-container > div > p {
-    text-align: left;
-    padding-left: 63px;
-    font-size: 12px;
-    margin-bottom: 0;
-    padding-bottom: 0;
+  text-align: left;
+  padding-left: 63px;
+  font-size: 12px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 p.chdesc {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 p.channel-name > i.fa {
-    background: #606060;
-    color: #fff;
-    border-radius: 100%;
-    margin-left: 5px;
-    font-size: 8px;
-    line-height: 8px;
-    padding: 3px;
+  background: #606060;
+  color: #fff;
+  border-radius: 100%;
+  margin-left: 5px;
+  font-size: 8px;
+  line-height: 8px;
+  padding: 3px;
 }
 
 p.channel-name {
-    font-size: 14px !important;
-    
+  font-size: 14px !important;
 }
 
-
-
-
-ul#options > span:last-child > span#commma , ul#options > span:nth-child(4) > span#commma {
-    display: none;
+ul#options > span:last-child > span#commma,
+ul#options > span:nth-child(4) > span#commma {
+  display: none;
 }
 
+.question-single > li {
+  font-weight: 700;
+}
+.single-video.ok {
+  background: green;
+  color: #fff;
+}
+.single-video {
+  background: red;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
